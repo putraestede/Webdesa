@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Jatikalang - Kecamatan Krian, Kabupaten Sidoarjo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'leaf-green': '#4ade80',
+                        'forest-green': '#16a34a',
+                        'sky-blue': '#0ea5e9',
+                        'deep-blue': '#0284c7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(74, 222, 128, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-green-50 to-blue-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-leaf-green to-forest-green rounded-full flex items-center justify-center">
+                        <img src="logo.jpg" class="w-full h-full object-cover rounded-xl" alt="Kantor Desa" />
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Desa Jatikalang</h1>
+                        <p class="text-xs text-gray-600">Krian, Sidoarjo</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="nav-link text-gray-700 hover:text-forest-green font-medium transition-colors">Beranda</a>
+                    <a href="#profil" class="nav-link text-gray-700 hover:text-forest-green font-medium transition-colors">Profil</a>
+                    <a href="#pemerintahan" class="nav-link text-gray-700 hover:text-forest-green font-medium transition-colors">Pemerintahan</a>
+                    <a href="#berita" class="nav-link text-gray-700 hover:text-forest-green font-medium transition-colors">Berita</a>
+                    <a href="#galeri" class="nav-link text-gray-700 hover:text-forest-green font-medium transition-colors">Galeri</a>
+                    <a href="#kritik-saran" class="nav-link text-gray-700 hover:text-forest-green font-medium transition-colors">Kritik & Saran</a>
+                    <button id="admin-btn" class="bg-gradient-to-r from-forest-green to-leaf-green text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all">
+                        🔐 Admin
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#beranda" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Beranda</a>
+                <a href="#profil" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Profil</a>
+                <a href="#pemerintahan" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Pemerintahan</a>
+                <a href="#berita" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Berita</a>
+                <a href="#galeri" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Galeri</a>
+                <a href="#kritik-saran" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Kritik & Saran</a>
+                <button id="admin-btn-mobile" class="block w-full text-left px-3 py-2 text-forest-green hover:bg-gray-100 rounded-md font-medium">
+                    🔐 Admin Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-pattern py-20 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="mb-8">
+                <div class="w-24 h-24 bg-gradient-to-br from-leaf-green to-forest-green rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                    <img src="logo.jpg" class="w-full h-full object-cover rounded-xl" alt="Kantor Desa" />
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+                    Selamat Datang di<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-forest-green to-sky-blue">Desa Jatikalang</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Desa yang asri dan berkembang di Kecamatan Krian, Kabupaten Sidoarjo, Jawa Timur. 
+                    Bersama membangun desa yang maju, sejahtera, dan berkelanjutan.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('profil')" class="bg-gradient-to-r from-forest-green to-leaf-green text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                        Jelajahi Desa
+                    </button>
+                    <button onclick="scrollToSection('berita')" class="bg-white text-forest-green border-2 border-forest-green px-8 py-3 rounded-full font-semibold hover:bg-forest-green hover:text-white transition-all duration-300">
+                        Berita Terkini
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil Desa -->
+    <section id="profil" class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Profil Desa Jatikalang</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-forest-green to-sky-blue mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Identitas Desa</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-leaf-green rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">📍</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Nama Desa</p>
+                                <p class="text-gray-600">Jatikalang</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-sky-blue rounded-full flex items-center justify-center">
+                                <img src="logo.jpg" class="w-full h-full object-cover rounded-xl" alt="Kantor Desa" />
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Kecamatan</p>
+                                <p class="text-gray-600">Krian</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-leaf-green rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">🗺️</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Kabupaten</p>
+                                <p class="text-gray-600">Sidoarjo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-sky-blue rounded-full flex items-center justify-center">
+                                <span class="text-white text-sm">🏝️</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Provinsi</p>
+                                <p class="text-gray-600">Jawa Timur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">Peta Wilayah Desa</h4>
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <svg viewBox="0 0 400 300" class="w-full h-64">
+                            <!-- Background -->
+                            <rect width="400" height="300" fill="#f0f9ff"/>
+                            
+                            <!-- Wilayah Desa -->
+                            <path d="M50 80 L350 80 L340 220 L60 220 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+                            
+                            <!-- Jalan Utama -->
+                            <line x1="50" y1="150" x2="350" y2="150" stroke="#6b7280" stroke-width="4"/>
+                            <line x1="200" y1="80" x2="200" y2="220" stroke="#6b7280" stroke-width="3"/>
+                            
+                            <!-- Pemukiman -->
+                            <rect x="80" y="100" width="15" height="15" fill="#fbbf24" rx="2"/>
+                            <rect x="120" y="110" width="15" height="15" fill="#fbbf24" rx="2"/>
+                            <rect x="160" y="105" width="15" height="15" fill="#fbbf24" rx="2"/>
+                            <rect x="240" y="100" width="15" height="15" fill="#fbbf24" rx="2"/>
+                            <rect x="280" y="115" width="15" height="15" fill="#fbbf24" rx="2"/>
+                            <rect x="320" y="105" width="15" height="15" fill="#fbbf24" rx="2"/>
+                            
+                            <!-- Sawah -->
+                            <rect x="70" y="170" width="40" height="30" fill="#84cc16" rx="3"/>
+                            <rect x="130" y="175" width="35" height="25" fill="#84cc16" rx="3"/>
+                            <rect x="250" y="170" width="45" height="35" fill="#84cc16" rx="3"/>
+                            
+                            <!-- Kantor Desa -->
+                            <rect x="190" y="130" width="20" height="20" fill="#dc2626" rx="2"/>
+                            <text x="200" y="125" text-anchor="middle" class="text-xs fill-gray-700">Kantor Desa</text>
+                            
+                            <!-- Kompas -->
+                            <g transform="translate(320, 40)">
+                                <circle cx="0" cy="0" r="15" fill="white" stroke="#374151" stroke-width="1"/>
+                                <path d="M0,-10 L5,0 L0,10 L-5,0 Z" fill="#dc2626"/>
+                                <text x="0" y="-20" text-anchor="middle" class="text-xs fill-gray-700">U</text>
+                            </g>
+                            
+                            <!-- Legenda -->
+                            <g transform="translate(20, 240)">
+                                <rect x="0" y="0" width="10" height="10" fill="#fbbf24"/>
+                                <text x="15" y="8" class="text-xs fill-gray-700">Pemukiman</text>
+                                <rect x="80" y="0" width="10" height="10" fill="#84cc16"/>
+                                <text x="95" y="8" class="text-xs fill-gray-700">Sawah</text>
+                                <rect x="140" y="0" width="10" height="10" fill="#dc2626"/>
+                                <text x="155" y="8" class="text-xs fill-gray-700">Kantor Desa</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Struktur Pemerintahan -->
+   <section id="pemerintahan" class="py-16 px-4 bg-gradient-to-br from-green-50 to-blue-50">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Struktur Pemerintahan Desa</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-forest-green to-sky-blue mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Kepala Desa -->
+            <div class="col-span-full flex justify-center mb-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover text-center max-w-sm">
+                    <div class="w-100 h-100 bg-gradient-to-br from-forest-green to-leaf-green rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <img src="kepdes.png" class="w-1000 h-1000" alt="Icon rumah" />
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Bapak yatmoko, S.Pd</h3>
+                    <p class="text-forest-green font-semibold mb-2">Kepala Desa</p>
+                    <p class="text-gray-600 text-sm">Periode 2019-2025</p>
+                </div>
+            </div>
+            
+            <!-- Perangkat Desa -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg card-hover text-center">
+                <div class="w-160 h-160 bg-gradient-to-br from-sky-blue to-deep-blue rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <img src="bu siti.jpg" class="w-full h-full object-cover rounded-xl" alt="Kantor Desa" />
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">ibu nina</h3>
+                <p class="text-sky-blue font-semibold mb-2">Sekretaris Desa</p>
+                <p class="text-gray-600 text-sm">Administrasi & Keuangan</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg card-hover text-center">
+                <div class="w-160 h-160 bg-gradient-to-br from-leaf-green to-forest-green rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <img src="pak hasan.jpg" class="w-full h-full object-cover rounded-xl" alt="Kantor Desa" />
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Bapak hasan</h3>
+                <p class="text-forest-green font-semibold mb-2">Kasi Pembangunan</p>
+                <p class="text-gray-600 text-sm">Infrastruktur & Pembangunan</p>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Berita & Kegiatan -->
+   <section id="berita" class="py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Berita & Kegiatan Desa</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-forest-green to-sky-blue mx-auto"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl overflow-hidden shadow-lg card-hover">
+                <div class="h-48 bg-gradient-to-br from-leaf-green to-forest-green flex items-center justify-center">
+                    <img src="kegiatan 17 agustusan.jpg" class="w-1000 h-1000" alt="Icon rumah" />
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-sky-blue font-semibold">17 Agustus 2025</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 mt-2">Penilaian salah satu desa jatikalang</h3>
+                    <p class="text-gray-600 mb-4">kegiatan lomba agustusan penilaian desa di jatikalang pemilihan kejuaraan desa terbersih.</p>
+                    <button class="text-forest-green font-semibold hover:text-leaf-green transition-colors">Baca Selengkapnya →</button>
+                </div>
+            </article>
+            
+            <article class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl overflow-hidden shadow-lg card-hover">
+                <div class="h-48 bg-gradient-to-br from-sky-blue to-deep-blue flex items-center justify-center">
+                    <img src="kegiatan wayangii.jpg" class="w-1000 h-1000" alt="Icon rumah" />>
+                </div>
+
+
+                <div class="p-6">
+                    <span class="text-xs text-sky-blue font-semibold">10 agustus 2025</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 mt-2">penamapilan wayang di desa</h3>
+                    <p class="text-gray-600 mb-4">penampilan wayang di desa jatikalang dari gubernur sidoarjo</p>
+                    <button class="text-forest-green font-semibold hover:text-leaf-green transition-colors">Baca Selengkapnya →</button>
+                </div>
+            </article>
+            
+            <article class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl overflow-hidden shadow-lg card-hover">
+                <div class="h-48 bg-gradient-to-br from-leaf-green to-sky-blue flex items-center justify-center">
+                    <img src="WhatsApp-Image-2024-04-02-at-10.01.06.jpeg" class="w-1000 h-1000" alt="Icon rumah" />>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-sky-blue font-semibold">8 Desember 2024</span>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 mt-2">Pembangunan Jalan Desa Tahap II</h3>
+                    <p class="text-gray-600 mb-4">Pembangunan jalan desa tahap kedua telah dimulai dengan target penyelesaian pada akhir Januari 2025.</p>
+                    <button class="text-forest-green font-semibold hover:text-leaf-green transition-colors">Baca Selengkapnya →</button>
+                </div>
+            </article>
+        </div>
+        
+        <div class="text-center mt-12">
+            <button class="bg-gradient-to-r from-forest-green to-leaf-green text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                Lihat Semua Berita
+            </button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Kritik & Saran -->
+    <section id="kritik-saran" class="py-16 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Kritik & Saran</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-forest-green to-sky-blue mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Suara Anda sangat berharga bagi kemajuan Desa Jatikalang. Sampaikan kritik, saran, atau masukan untuk pembangunan desa yang lebih baik.
+                </p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 shadow-lg">
+                <form id="kritik-saran-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Nama Lengkap *</label>
+                            <input type="text" id="nama" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-forest-green focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-forest-green focus:border-transparent transition-all">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">No. Telepon</label>
+                            <input type="tel" id="telepon" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-forest-green focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Kategori</label>
+                            <select id="kategori" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-forest-green focus:border-transparent transition-all">
+                                <option value="">Pilih Kategori</option>
+                                <option value="infrastruktur">Infrastruktur</option>
+                                <option value="pelayanan">Pelayanan Publik</option>
+                                <option value="kesehatan">Kesehatan</option>
+                                <option value="pendidikan">Pendidikan</option>
+                                <option value="ekonomi">Ekonomi</option>
+                                <option value="lingkungan">Lingkungan</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Kritik & Saran *</label>
+                        <textarea id="pesan" required rows="6" placeholder="Tuliskan kritik, saran, atau masukan Anda untuk kemajuan Desa Jatikalang..." class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-forest-green focus:border-transparent transition-all resize-none"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-gradient-to-r from-forest-green to-leaf-green text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            Kirim Pesan
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Daftar Kritik & Saran -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Kritik & Saran Terbaru</h3>
+                <div id="daftar-kritik-saran" class="space-y-4">
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Ahmad Rizki</h4>
+                                <span class="text-sm text-sky-blue bg-sky-50 px-2 py-1 rounded-full">Infrastruktur</span>
+                            </div>
+                            <span class="text-sm text-gray-500">2 hari yang lalu</span>
+                        </div>
+                        <p class="text-gray-600">Mohon diperbaiki jalan di RT 03 yang sudah berlubang. Terima kasih atas perhatiannya.</p>
+                        <div class="mt-3 text-sm text-forest-green font-medium">✓ Sedang ditindaklanjuti</div>
+                    </div>
+                    
+                    <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Siti Nurhaliza</h4>
+                                <span class="text-sm text-leaf-green bg-green-50 px-2 py-1 rounded-full">Pelayanan Publik</span>
+                            </div>
+                            <span class="text-sm text-gray-500">5 hari yang lalu</span>
+                        </div>
+                        <p class="text-gray-600">Pelayanan di kantor desa sudah sangat baik dan ramah. Terima kasih kepada seluruh perangkat desa.</p>
+                        <div class="mt-3 text-sm text-forest-green font-medium">✓ Terima kasih atas apresiasinya</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Galeri Foto -->
+   <section id="galeri" class="py-16 px-4 bg-gradient-to-br from-green-50 to-blue-50">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galeri Foto Desa</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-forest-green to-sky-blue mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Kartu 1 -->
+            <div class="aspect-square bg-gradient-to-br from-leaf-green to-forest-green rounded-xl flex items-center justify-center shadow-lg card-hover cursor-pointer" onclick="openModal('Sawah Padi', '🌾')">
+                <img src="kegiatan wayangii.jpg" class="w-full h-full object-cover rounded-xl" alt="Kegiatan Wayang" />
+            </div>
+        
+            <!-- Kartu 2 -->
+            <div class="aspect-square bg-gradient-to-br from-sky-blue to-deep-blue rounded-xl flex items-center justify-center shadow-lg card-hover cursor-pointer" onclick="openModal('Kantor Desa', '🏛️')">
+                <img src="images.jpg" class="w-full h-full object-cover rounded-xl" alt="Kantor Desa" />
+            </div>
+        
+            <!-- Kartu 3 -->
+            <div class="aspect-square bg-gradient-to-br from-leaf-green to-sky-blue rounded-xl flex items-center justify-center shadow-lg card-hover cursor-pointer" onclick="openModal('Kegiatan Gotong Royong', '🤝')">
+                <img src="images (1).jpg" class="w-full h-full object-cover rounded-xl" alt="Kegiatan Gotong Royong" />
+            </div>
+        
+            <!-- Kartu 4 -->
+            <div class="aspect-square bg-gradient-to-br from-forest-green to-deep-blue rounded-xl flex items-center justify-center shadow-lg card-hover cursor-pointer" onclick="openModal('Masjid Desa', '🕌')">
+                <img src="f72ef_bphtb-sidoarjo-diskon.jpg" class="w-full h-full object-cover rounded-xl" alt="Masjid Desa" />
+            </div>
+        
+            <!-- Kartu 5 -->
+            <div class="aspect-square bg-gradient-to-br from-sky-blue to-leaf-green rounded-xl flex items-center justify-center shadow-lg card-hover cursor-pointer" onclick="openModal('Sekolah Dasar', '🏫')">
+                <img src="kegiatan wayang.jpg" class="w-full h-full object-cover rounded-xl" alt="Sekolah Dasar" />
+            </div>
+        
+            <!-- Kartu 6 -->
+            <div class="aspect-square bg-gradient-to-br from-deep-blue to-forest-green rounded-xl flex items-center justify-center shadow-lg card-hover cursor-pointer" onclick="openModal('Pasar Desa', '🏪')">
+                <img src="kegiatan 17 agustusan.jpg" class="w-full h-full object-cover rounded-xl" alt="Pasar Desa" />
+            </div>
+        
+            <!-- Kartu 7 -->
+            <div class="aspect-square bg-gradient-to-br from-leaf-green to-deep-blue rounded-xl flex items-center justify-center shadow-lg card-hover cursor-pointer" onclick="openModal('Jalan Desa', '🛣️')">
+                <img src="WhatsApp-Image-2024-04-02-at-10.01.06.jpeg" class="w-full h-full object-cover rounded-xl" alt="Jalan Desa" />
+            </div>
+        
+            <!-- Kartu 8 -->
+            <div class="aspect-square bg-gradient-to-br from-forest-green to-sky-blue rounded-xl flex items-center justify-center shadow-lg card-hover cursor-pointer" onclick="openModal('Taman Desa', '🌳')">
+                <span class="text-white text-4xl">🌳</span>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-leaf-green to-forest-green rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold">🏛️</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Desa Jatikalang</h3>
+                        <p class="text-gray-400 text-sm">Krian, Sidoarjo</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">Desa yang maju, sejahtera, dan berkelanjutan untuk generasi mendatang.</p>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                <div class="space-y-2 text-gray-400">
+                    <p>📍 Jl. Raya Jatikalang No. 123</p>
+                    <p>📞 (031) 8941234</p>
+                    <p>✉️ desa.jatikalang@sidoarjokab.go.id</p>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Jam Pelayanan</h4>
+                <div class="space-y-2 text-gray-400">
+                    <p>Senin - Jumat: 08:00 - 15:00</p>
+                    <p>Sabtu: 08:00 - 12:00</p>
+                    <p>Minggu: Tutup</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 Desa Jatikalang. Semua hak cipta dilindungi.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Modal untuk Galeri -->
+<div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl p-8 max-w-md mx-4">
+        <div class="text-center">
+            <div id="modal-icon" class="text-6xl mb-4">🌾</div>
+            <h3 id="modal-title" class="text-2xl font-bold text-gray-800 mb-4">Sawah Padi</h3>
+            <p class="text-gray-600 mb-6">Pemandangan sawah padi yang hijau dan subur di Desa Jatikalang.</p>
+            <button onclick="closeModal()" class="bg-gradient-to-r from-forest-green to-leaf-green text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all">
+                Tutup
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal Login Admin -->
+    <div id="admin-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-2xl p-8 max-w-md mx-4 w-full">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-forest-green to-leaf-green rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span class="text-white text-2xl">🔐</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800">Login Admin</h3>
+                <p class="text-gray-600 mt-2">Masuk ke panel administrasi desa</p>
+            </div>
+            
+            <form id="admin-login-form" class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Username</label>
+                    <input type="text" id="admin-username" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-forest-green focus:border-transparent transition-all">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Password</label>
+                    <input type="password" id="admin-password" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-forest-green focus:border-transparent transition-all">
+                </div>
+                <div class="flex space-x-3 pt-4">
+                    <button type="submit" class="flex-1 bg-gradient-to-r from-forest-green to-leaf-green text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all">
+                        Masuk
+                    </button>
+                    <button type="button" onclick="closeAdminModal()" class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-300 transition-all">
+                        Batal
+                    </button>
+                </div>
+            </form>
+            
+            <div class="mt-4 p-3 bg-blue-50 rounded-xl">
+                <p class="text-sm text-blue-700">
+                    <strong>Demo:</strong> Username: admin, Password: desa123
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel Admin -->
+    <div id="admin-panel" class="fixed inset-0 bg-white z-50 hidden overflow-y-auto">
+        <div class="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+            <!-- Header Admin -->
+            <div class="bg-white shadow-lg">
+                <div class="max-w-7xl mx-auto px-4 py-4">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-forest-green to-leaf-green rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">⚙️</span>
+                            </div>
+                            <div>
+                                <h1 class="text-xl font-bold text-gray-800">Panel Admin Desa</h1>
+                                <p class="text-sm text-gray-600">Selamat datang, Administrator</p>
+                            </div>
+                        </div>
+                        <button onclick="logoutAdmin()" class="bg-red-500 text-white px-4 py-2 rounded-xl font-semibold hover:bg-red-600 transition-all">
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Admin -->
+            <div class="max-w-7xl mx-auto px-4 py-8">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Statistik -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">📊 Statistik</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Kritik & Saran</span>
+                                <span class="font-semibold text-forest-green" id="total-kritik">12</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Berita Aktif</span>
+                                <span class="font-semibold text-sky-blue">8</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Pengunjung Hari Ini</span>
+                                <span class="font-semibold text-leaf-green">156</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kelola Berita -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">📰 Kelola Berita</h3>
+                        <div class="space-y-3">
+                            <button onclick="showAddNews()" class="w-full bg-gradient-to-r from-forest-green to-leaf-green text-white py-2 rounded-xl font-semibold hover:shadow-lg transition-all">
+                                Tambah Berita
+                            </button>
+                            <button class="w-full bg-sky-100 text-sky-700 py-2 rounded-xl font-semibold hover:bg-sky-200 transition-all">
+                                Edit Berita
+                            </button>
+                            <button class="w-full bg-red-100 text-red-700 py-2 rounded-xl font-semibold hover:bg-red-200 transition-all">
+                                Hapus Berita
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Kelola Galeri -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">🖼️ Kelola Galeri</h3>
+                        <div class="space-y-3">
+                            <button class="w-full bg-gradient-to-r from-sky-blue to-deep-blue text-white py-2 rounded-xl font-semibold hover:shadow-lg transition-all">
+                                Upload Foto
+                            </button>
+                            <button class="w-full bg-green-100 text-green-700 py-2 rounded-xl font-semibold hover:bg-green-200 transition-all">
+                                Edit Galeri
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Daftar Kritik & Saran Admin -->
+                <div class="mt-8 bg-white rounded-2xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">💬 Kelola Kritik & Saran</h3>
+                    <div id="admin-kritik-list" class="space-y-4">
+                        <div class="border border-gray-200 rounded-xl p-4">
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Ahmad Rizki</h4>
+                                    <span class="text-sm text-sky-blue bg-sky-50 px-2 py-1 rounded-full">Infrastruktur</span>
+                                    <p class="text-sm text-gray-500 mt-1">ahmad.rizki@email.com • 081234567890</p>
+                                </div>
+                                <span class="text-sm text-gray-500">2 hari yang lalu</span>
+                            </div>
+                            <p class="text-gray-600 mb-3">Mohon diperbaiki jalan di RT 03 yang sudah berlubang. Terima kasih atas perhatiannya.</p>
+                            <div class="flex space-x-2">
+                                <button class="bg-forest-green text-white px-3 py-1 rounded-lg text-sm font-medium hover:bg-green-700 transition-all">
+                                    Tandai Selesai
+                                </button>
+                                <button class="bg-sky-blue text-white px-3 py-1 rounded-lg text-sm font-medium hover:bg-blue-600 transition-all">
+                                    Balas
+                                </button>
+                                <button class="bg-red-500 text-white px-3 py-1 rounded-lg text-sm font-medium hover:bg-red-600 transition-all">
+                                    Hapus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Navigation link smooth scrolling
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Gallery modal functions
+        function openModal(title, icon) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-icon').textContent = icon;
+            document.getElementById('gallery-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('gallery-modal').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('gallery-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', function() {
+            const sections = ['beranda', 'profil', 'pemerintahan', 'berita', 'galeri', 'kritik-saran'];
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    current = section;
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-forest-green');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-forest-green');
+                }
+            });
+        });
+
+        // Kritik & Saran Form
+        document.getElementById('kritik-saran-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const telepon = document.getElementById('telepon').value;
+            const kategori = document.getElementById('kategori').value;
+            const pesan = document.getElementById('pesan').value;
+            
+            if (!nama || !pesan) {
+                alert('Nama dan pesan wajib diisi!');
+                return;
+            }
+            
+            // Simulasi pengiriman
+            const newKritik = {
+                nama: nama,
+                email: email,
+                telepon: telepon,
+                kategori: kategori || 'Lainnya',
+                pesan: pesan,
+                tanggal: 'Baru saja'
+            };
+            
+            // Tambah ke daftar
+            addKritikToList(newKritik);
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            alert('Terima kasih! Kritik dan saran Anda telah terkirim dan akan segera ditindaklanjuti.');
+        });
+
+        function addKritikToList(kritik) {
+            const daftarKritik = document.getElementById('daftar-kritik-saran');
+            const kategoriColors = {
+                'infrastruktur': 'text-sky-blue bg-sky-50',
+                'pelayanan': 'text-leaf-green bg-green-50',
+                'kesehatan': 'text-red-500 bg-red-50',
+                'pendidikan': 'text-purple-500 bg-purple-50',
+                'ekonomi': 'text-yellow-600 bg-yellow-50',
+                'lingkungan': 'text-green-600 bg-green-50',
+                'lainnya': 'text-gray-600 bg-gray-50'
+            };
+            
+            const colorClass = kategoriColors[kritik.kategori.toLowerCase()] || kategoriColors['lainnya'];
+            
+            const newItem = document.createElement('div');
+            newItem.className = 'bg-white border border-gray-200 rounded-xl p-6 shadow-sm';
+            newItem.innerHTML = `
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">${kritik.nama}</h4>
+                        <span class="text-sm ${colorClass} px-2 py-1 rounded-full">${kritik.kategori}</span>
+                    </div>
+                    <span class="text-sm text-gray-500">${kritik.tanggal}</span>
+                </div>
+                <p class="text-gray-600">${kritik.pesan}</p>
+                <div class="mt-3 text-sm text-orange-600 font-medium">⏳ Menunggu tanggapan</div>
+            `;
+            
+            daftarKritik.insertBefore(newItem, daftarKritik.firstChild);
+        }
+
+        // Admin Functions
+        function openAdminModal() {
+            document.getElementById('admin-modal').classList.remove('hidden');
+        }
+
+        // Add event listeners for admin buttons
+        document.getElementById('admin-btn').addEventListener('click', openAdminModal);
+        document.getElementById('admin-btn-mobile').addEventListener('click', function() {
+            openAdminModal();
+            // Close mobile menu
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+
+        function closeAdminModal() {
+            document.getElementById('admin-modal').classList.add('hidden');
+            document.getElementById('admin-login-form').reset();
+        }
+
+        // Admin Login
+        document.getElementById('admin-login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('admin-username').value;
+            const password = document.getElementById('admin-password').value;
+            
+            // Demo credentials
+            if (username === 'admin' && password === 'desa123') {
+                closeAdminModal();
+                document.getElementById('admin-panel').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                alert('Username atau password salah!');
+            }
+        });
+
+        function logoutAdmin() {
+            document.getElementById('admin-panel').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function showAddNews() {
+            alert('Fitur tambah berita akan segera tersedia!');
+        }
+
+        // Close modals when clicking outside
+        document.getElementById('admin-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeAdminModal();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97622615357fff83',t:'MTc1NjM2NjcwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
